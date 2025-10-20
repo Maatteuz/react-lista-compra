@@ -5,8 +5,8 @@ import { useNavigate } from "react-router";
 const Cadastro = () => {
     const navigate = useNavigate();
     const nomeRef = useRef();
-    const qtdRef = useRef();
     const [produtos, setProdutos]= useState([]);
+    const [qtd, setQtd] = useState(1);
 
     
     return ( 
@@ -24,7 +24,7 @@ const Cadastro = () => {
                     <div className="flex gap-4 items-center">
                         <div className="flex gap-3 items-center">
                             <BiMinus />
-                            <input ref={qtdRef} type="number" placeholder="0" className="w-[80px] text-center"/>
+                            {qtd}
                             <BiPlus />
                         </div>
                         <button className="h-[40px] bg-[#FF9D00] rounded font-bold flex-1">Adicionar</button>
